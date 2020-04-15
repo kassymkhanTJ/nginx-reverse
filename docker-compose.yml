@@ -1,8 +1,7 @@
-version: "3.3"
+version: '3'
+
 services:
-  nginx-proxy:
-    image: jwilder/nginx-proxy
+  nginx-reverse:
+    build: ./
     ports:
-      - 80:80
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - 80:8090
